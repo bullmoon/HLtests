@@ -1,0 +1,79 @@
+{% block content %}
+
+<h1 class="menu">ISO 11452-4 "The Bulk Current Injection (BCI)"</h1>
+<div class="atmtv">
+<table>
+    <tr>
+      <td>Software: EMC32</td>
+      <td id="multiple-connectors">When a DUT has <b>multiple connectors</b>, the test should be repeated with the injection probe clamped <mark>around each separate connector bundle</mark>, if applicable. Detailed connectors configuration to be tested shall be defined in the test plan and recorded in the test report.</td>
+    </tr>
+    <tr>
+      <td>Frequency range: 100 kHz - 400 MHz</td>
+      <td>...the dwell time shall be a minimum of 1 s (clause 5.5, 11452-1)</td>
+    </tr>
+    <tr>
+      <td>The following modulations should be used for all applicable parts of ISO 11452:<br>— CW: 15 Hz to 18 GHz;<br>— AM: 10 kHz to 800 MHz;<br>— PM type 1: 800 MHz to 1,2 GHz and 1,4 GHz to 2,7 GHz;<br>— PM type 2: 1,2 GHz to 1,4 GHz and 2,7 GHz to 18 GHz. </td>
+      <td>frequency steps sizes (Logarithmic steps):<br> 100 kHz - 10 MHz: 10%<br> 10 MHz - 400 MHz: 5%</td>
+    </tr>
+  </table>
+<p></p>
+<table>
+    <tr>
+      <td><img src="/automotive/static/images/11452-4/substitution_method.png"></td>
+      <td><img src="/automotive/static/images/11452-4/calibration_example.png"><br><img src="/automotive/static/images/11452-4/test_example.png"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+      <td><img src="/automotive/static/images/11452-4/substitution-method-test-setup.png"></td>
+      <td><img src="/automotive/static/images/11452-4/calibration_photo.png"></td>
+    </tr>
+    <tr>
+        <td><img src="/automotive/static/images/11452-4/side_view.png"></td>
+        <td><img src="/automotive/static/images/11452-4/top_view.png"></td>
+      </tr>
+  </table>
+<p></p>
+  <table>
+    <tr>
+      <td>Equipment</td>
+      <td>EMC32 Hardware Setup (it is possible to use termination instead of CP 231)</td>
+    </tr>
+    <tr>
+      <td>
+        — The calibration shall be performed with an unmodulated sinusoidal RF signal (CW).<br>
+        <ul><b>Plots:</b>
+        <li>Calibration
+          <ul>
+            <li>Forward</li>
+            <li>Sensor</li>
+          </ul>
+        </li>
+        <li>Test</li>
+        <ul>
+            <li>Forward</li>
+            <li>Immunity</li>
+          </ul>
+      </ul><img src="/automotive/static/images/11452-4/testequipment.png">
+      <p></p>
+      <mark>Disable "Sensor Level" for test</mark>. It allows to remove the sensor from the setup phisically.<br>
+      <img src="/automotive/static/images/11452-4/disable_sensor.png">
+    </td>
+      <td><img src="/automotive/static/images/11452-4/testsetup01.png"><br><img src="/automotive/static/images/11452-4/testsetup02.png"></td>
+    </tr>
+    <tr>
+  </table>
+  <p></p>
+  <table>
+      <td>EMC32 Calibration config (Dwell time = 0)</td>
+      <td>EMC32 Test config (CW and Modulation can't be in the same config)</td>
+    </tr>
+    <tr>
+      <td><img src="/automotive/static/images/11452-4/dwell_step_calib.png" width="480"></td>
+      <td><img src="/automotive/static/images/11452-4/dwell_step_test.png" width="480"></td>
+    </tr>
+  </table>
+</div>
+{% endblock %}

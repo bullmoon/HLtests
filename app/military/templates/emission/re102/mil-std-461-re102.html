@@ -1,0 +1,232 @@
+{% block content %}
+
+<style>
+    /* Простые стили для скрытия и отображения блоков */
+    .version-content {
+        display: none; /* По умолчанию скрываем все блоки с версиями */
+    }
+    .version-content.active {
+        display: block; /* Отображаем выбранную версию */
+    }
+</style>
+
+<h1 class="menu">MIL-STD-461F,G<br>
+    5.18 RE102, Radiated emissions, electric field.</h1>
+
+<table>
+    <caption align="top">
+        The requirement is applicable as follows:
+    </caption>
+    <thead></thead>
+    <tbody>
+        <tr align="center">
+            <td><img src="/military/static/images/re102g/applicable.png" width="1024"></td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="mil">
+
+    <table>
+        <caption align="top">
+            Basic setups
+        </caption>
+        <thead>
+            <tr>
+                <th><img src="/military/static/images/mil-std-461/f/figure_2.png"></th>
+                <th><img src="/military/static/images/mil-std-461/f/figure_3.png"></th>
+                <th><img src="/military/static/images/mil-std-461/f/figure_4.png"></th>
+            </tr>
+            <tr>
+                <th><img src="/military/static/images/mil-std-461/g/figure_2.png"></th>
+                <th><img src="/military/static/images/mil-std-461/g/figure_2.png"></th>
+                <th><img src="/military/static/images/mil-std-461/g/figure_2.png"></th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+
+    <table>
+    <caption align="top">
+        Limits:
+    </caption>
+    <thead></thead>
+    <tbody>
+        <tr>
+            <td><!-- Select Limit -->
+                <label for="version-selector">Select the limit:</label>
+                <select id="version-selector">
+                    <option value="v1">for surface ship applications</option>
+                    <option value="v2">for submarine applications</option>
+                    <option value="v3">for aircraft and space system applications</option>
+                    <option value="v4">for ground applications</option>
+                </select>
+            <p></p>
+                <table id="data-table">
+                    <thead></thead>
+                    <tbody></tbody>
+                </table>
+            <p></p>
+            <ul><b>Set or load spectrum analyser settings:</b>
+                <li>Level</li>
+                <li>Factors</li>
+                <li>Sweep time</li>
+                <li>RBW</li>
+                <li>VBW</li>
+                <li>Points</li>
+                <li>Reference level</li>
+            </ul>
+            </td>
+            <td><!-- surface ship applications -->
+                <section id="version-1" class="version-content">
+                    <img src="/military/static/images/re102g/figure_re102-1.png">
+                </section>
+                
+                <!-- submarine applications -->
+                <section id="version-2" class="version-content">
+                    <img src="/military/static/images/re102g/figure_re102-2.png">
+                </section>
+                
+                <!-- aircraft and space system applications -->
+                <section id="version-3" class="version-content">
+                    <img src="/military/static/images/re102g/figure_re102-3.png">
+                </section>
+
+                <!-- ground applications -->
+                <section id="version-4" class="version-content">
+                    <img src="/military/static/images/re102g/figure_re102-4.png">
+                </section>
+            </td>
+            <td>
+                <img src="/military/static/images/mil-std-461/g/figure_1.png">
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p><b>HOW TO USE CALCULATOR?</b></p>
+
+<table>
+    <caption align="top">
+        <mark>Calibration:</mark>
+    </caption>
+    <thead></thead>
+    <tbody>
+        <tr>
+            <td colspan="2">Rod antenna (<b>Internal preamplifier must be swtched OFF until 30 MHz</b>)</td>
+        </tr>
+        <tr>
+            <td><ul>EUT setup
+                <li>For rod antenna measurements, electrical bonding of the counterpoise is prohibited.</li>
+                <li>The required configuration is shown on Figure RE102-6.</li>
+                <li>The shield of the coaxial cable from the rod antenna matching network shall be electrically bonded to the floor in a length as short as possible (not to exceed 10 cm excess length).</li>
+                <li>A ferrite sleeve with 20 to 30 ohms impedance (lossy with minimal inductance) at 20 MHz shall be placed near the center of the coaxial cable length between the antenna matching network and the floor.</li></ul>
+                <img src="/military/static/images/re102g/figure_re102-8.png"></td>
+            <td><img src="/military/static/images/re102g/rod_check_photo01.png"><br>
+                <img src="/military/static/images/re102g/photo-collage.png"></td>
+        </tr>
+        <tr>
+            <td colspan="2">Other</td>
+        </tr>
+        <tr>
+            <td><img src="/military/static/images/re102g/figure_re102-5.png"></td>
+            <td><ul>
+                It is advisable to perform a full calibration of the entire frequency range (30 MHz to 18 GHz) <mark>in a single session</mark>.
+                </ul>
+                <img src="/military/static/images/re102g/calibration.png"></td>
+        </tr>
+        <tr>
+            <td>
+            <ul>
+                <b>(461F)</b> Using the system check path of Figure RE102-5, perform the following evaluation of the overall measurement system from each antenna to the data output device at the <mark>highest measurement frequency of the antenna</mark>.<br>
+                For active rod antennas, the evaluation shall be performed at <mark>the lowest frequency</mark> of test, at <mark>a mid-band frequency</mark>, and at <mark>the highest frequency</mark> of test.
+            </ul>
+            <ul>
+                <b>(461G)</b> Using the system check path of Figure RE102-5, perform the following evaluation of the overall measurement system from the coaxial cable end used at each antenna to the data output device at <mark>10.5 kHz</mark> (only for measurements implemented between 10 kHz and 2 MHz), <mark>2.1 MHz</mark>, <mark>12 MHz</mark> and <mark>29.5 MHz</mark> for active rod antennas, <mark>197 MHz</mark> for the biconical antenna, <mark>990 MHz</mark> for the large double ridge horn and <mark>17.5 GHz</mark> for the small double ridge horn.
+            </ul>
+            </td>
+            <td><img src="/military/static/images/mil-std-461/re102fg_cal_ver.png"><br>
+                <img src="/military/static/images/mil-std-461/re102fg_cal_ver_2.png"></td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <caption align="top">
+            Bandwith and sweep time.
+    </caption>
+    <thead></thead>
+    <tbody>
+        <td><ul>Sweep time calculation
+            <li>[2 MHz-30 MHz, RBW 10 kHz]: (30-2)*1.5=<b>42 sec</b></li>
+            <li>[30 MHz-200 MHz, RBW 100 kHz]: (200-30)*0.15=<b>26 sec</b></li>
+            <li>[200 MHz - 1000 MHz, RBW 100 kHz]: (1000-200)*0.15=<b>120 sec</b></li>
+            <li>[Above 1 GHz, RBW 1 MHz]: (18-1)*15=<b>255 sec</b> (e.g., with the HL 4114 antenna)</li>
+        </ul>
+        <img src="/military/static/images/re102g/calibration_result.png"></td>
+        <td><img src="/military/static/images/mil-std-461/g/table_2.png"></td>
+    </tbody>
+</table>
+
+<table>
+    <caption align="top">
+        <mark>Propagation:</mark>
+    </caption>
+    <thead></thead>
+    <tbody>
+        <tr>
+            <td><img src="/equipment/static/images/hl_5759.png"></td>
+            <td><ul>Calculate the level on the generator as "<b>-30 + cable loss.</b>"
+                </ul>
+                <ul>Frequencies:
+                    <li>10.5<sup>*</sup> kHz</li>
+                    <li>30 MHz</li>
+                    <li>200 MHz</li>
+                    <li>1000 MHz</li>
+                    <li>18000 MHz</li>
+
+                </ul>
+                <img src="/military/static/images/re102g/propagation_photo.png"></td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <caption align="top">
+        Test:
+    </caption>
+    <thead></thead>
+    <tbody>
+        <tr>
+            <td>The number of required antenna positions depends on the size of the test setup boundary and the number of enclosures included in the setup.
+                <ul>For testing <mark>below 200 MHz</mark>, use the following criteria to determine the individual antenna positions.
+                <li>For setups with the side edges of the boundary 3 meters or less,
+                    <mark>one position is required</mark> and the antenna shall be centered with
+                    respect to the side edges of the boundary.</li>
+                <li>For setups with the side edges of the boundary greater than 3
+                    meters, use multiple antenna positions at spacings as shown on
+                    Figure RE102-7. Determine the number of antenna positions (N)
+                    by dividing the edge-to-edge boundary distance (in meters) by 3
+                    and rounding up to an integer.</li>
+                </ul>
+                <ul>
+                    For testing <mark>from 200 MHz up to 1 GHz</mark>, place the antenna in a sufficient
+number of positions such that the entire area of each EUT enclosure and <mark>the first 35 cm of cables and leads</mark> interfacing with the EUT
+enclosure are within the 3 dB beamwidth of the antenna.
+                </ul>
+                <ul>For testing <mark>at 1 GHz and above</mark>, place the antenna in a sufficient
+number of positions such that the entire area of each EUT enclosure
+and <mark>the first 7 cm of cables and leads</mark> interfacing with the EUT
+enclosure are within the 3 dB beamwidth of the antenna.
+                </ul>
+                <img src="/military/static/images/re102g/figure_re102-7.png"><br>
+                <img src="/military/static/images/re102g/test_rod.png"></td>
+            <td><img src="/military/static/images/re102g/figure_re102-6.png"></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<script src="{{ url_for('military.static', filename='js/ce102-script.js') }}"></script>
+{% endblock %}

@@ -1,9 +1,38 @@
-<!doctype html>
-<html>
-<head>
-    <title>Главная страница</title>
-</head>
-<body>
-    <h1>Добро пожаловать на главную страницу!</h1>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+<table class="menu">
+            <thead>
+              <tr>
+                <th colspan="2" style="border: 4px dashed grey"><a href="/military">Military</a></th>
+                <th colspan="2" style="border: 4px dashed grey"><a href="/automotive">Automotive</a></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="/military/susceptibility">Radiated susceptibility</a></td>
+                <td><a href="/military/susceptibility">Conducted susceptibility</a></td>
+                <td><a href="/automotive/immunity">Radiated Immunity</a></td>
+                <td><a href="/automotive/immunity">Conducted Immunity</a></td>
+              </tr>
+              <tr>
+                <td colspan="2"><img src="{{ url_for('military.static', filename='images/plane.jpg') }}"></td>
+                <td colspan="2"><img src="{{ url_for('automotive.static', filename='images/vw4.jpg') }}"></td>
+              </tr>
+              <tr>
+                <td><a href="/military/emission">Radiated Emission</a></td>
+                <td><a href="/military/emission">Conducted Emission</a></td>
+                <td><a href="/automotive/emission">Radiated Emission</a></td>
+                <td><a href="/automotive/emission">Conducted Emission</a></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tfoot>
+</table>
+{% endblock %}

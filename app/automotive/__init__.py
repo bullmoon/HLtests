@@ -1,9 +1,10 @@
 from flask import Blueprint
 
-automotive = Blueprint('automotive',
-                       __name__,
-                       template_folder='templates',
-                       static_folder='static',
-                       url_prefix='/automotive')
+automotive = Blueprint(
+    'automotive', 
+    __name__,
+    static_folder='static',  # Путь к статическим файлам
+    template_folder='templates'  # Путь к шаблонам
+)
 
 from . import routes

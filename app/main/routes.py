@@ -7,4 +7,4 @@ def index():
 
 @main.route('/about')
 def about():
-    return "<h1>About Main page</h1>"
+    return render_template('about.html')
